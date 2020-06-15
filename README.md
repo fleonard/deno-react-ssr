@@ -1,5 +1,5 @@
-# deno-react-ssr
-A simple React SSR App in Deno.
+# React SSR App in Deno
+Basic [React](https://reactjs.org/) SSR App in [Deno](https://deno.land/).
 
 ## Installation
 Using Shell (macOS, Linux):
