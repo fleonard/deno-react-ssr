@@ -2,10 +2,7 @@ import {
   Application,
   React,
   ReactDOMServer,
-  Request,
-  Response,
   Router,
-  NextFunction,
 } from './deps.ts';
 
 import App from "./app.tsx";
@@ -30,17 +27,6 @@ const html =
       </main>  
     </body>
   </html>`;
-
-/*
-  Request, Response and NextFunction types are needed because
-  Deno v1.0.1 introduced a bug where it dropped support for `.tsx` files resulting in
-  breaking typescript errors.
-  Should be fixed in v1.0.3
-
-  https://github.com/denoland/deno/issues/5776
-  https://github.com/denoland/deno/issues/5772
-  https://github.com/denoland/deno/pull/5785
-*/
 
 const router = new Router();
 router
