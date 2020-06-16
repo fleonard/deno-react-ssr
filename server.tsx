@@ -22,9 +22,7 @@ const html =
       <script type="module" src="${jsBundle}"></script>
     </head>
     <body>
-      <main id="app">
-        ${(ReactDOMServer as any).renderToString(<App />)}
-      </main>  
+      <main id="app">${(ReactDOMServer as any).renderToString(<App />)}</main>  
     </body>
   </html>`;
 
