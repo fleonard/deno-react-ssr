@@ -1,5 +1,6 @@
 import {
   Application,
+  Context,
   React,
   ReactDOMServer,
   Router,
@@ -22,17 +23,17 @@ const html =
       <script type="module" src="${jsBundle}"></script>
     </head>
     <body>
-      <main id="app">${(ReactDOMServer as any).renderToString(<App />)}</main>  
+      <main id="app">${ReactDOMServer.renderToString(<App />)}</main>  
     </body>
   </html>`;
 
 const router = new Router();
 router
-  .get('/', (context: any) => {
+  .get('/', (context: Context) => {
     context.response.type = 'text/html';
     context.response.body = html;
   })
-  .get(jsBundle, (context: any) => {
+  .get(jsBundle, (context: Context) => {
     context.response.type = 'application/javascript';
     context.response.body = js;
   });
