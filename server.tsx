@@ -14,7 +14,10 @@ const app = new Application();
 const jsBundle = "/main.js";
 
 const js =
-  `import React from "https://dev.jspm.io/react@16.13.1";\nimport ReactDOM from "https://dev.jspm.io/react-dom@16.13.1";\nconst App = ${App};\nReactDOM.hydrate(React.createElement(App), document.getElementById('app'));`;  
+`import React from "https://dev.jspm.io/react@16.13.1";
+ import ReactDOM from "https://dev.jspm.io/react-dom@16.13.1";
+ const App = ${App};
+ ReactDOM.hydrate(React.createElement(App), document.getElementById('app'));`;  
 
 const html =
   `<html>
