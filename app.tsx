@@ -1,17 +1,5 @@
 import { React } from "./deps.ts";
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      button: any;
-      div: any;
-      h2: any;
-      p: any;
-      span: any;
-    }
-  }
-}
-
 const App = () => {
   const [count, setCount] = React.useState(0);
 
